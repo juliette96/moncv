@@ -44,6 +44,16 @@ class DefaultController extends Controller
         
         return array();
     }
+    
+    /**
+     *  @Route("/admin", name="admin")
+     * @Template()
+     */
+    public function adminAction(Request $request)
+    {
+        return $this->redirectToRoute('homepage');
+    }
+    
     /**
      * @Route("/bye", name="formation")
      * @Template()

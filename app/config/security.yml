@@ -28,4 +28,6 @@ security:
     
     access_control:
         # require ROLE_ADMIN for /admin*
-        #- { path: ^/hey, roles: ROLE_ADMIN }
+        - { path: ^/loisir, roles: ROLE_ADMIN }
+        - { path: ^/formation, roles: ROLE_ADMIN }
+        - { path: ^/admin, roles: ROLE_ADMIN }
