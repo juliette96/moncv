@@ -8,10 +8,11 @@ use ApiPlatform\Core\Annotation\ApiResource;
  * @ApiResource
  * @ORM\Entity @ORM\Table(name="Loisirs")
  **/
-class Loisirs {
+class Loisirs
+{
     /**
-     * @ORM\Id 
-     * @ORM\Column(type="integer") 
+     * @ORM\Id
+     * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
      **/
     private $id;

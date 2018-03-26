@@ -7,7 +7,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-
 class DefaultController extends Controller
 {
     /**
@@ -15,34 +14,33 @@ class DefaultController extends Controller
      * @Template()
      *
      * @param Request $request the request
-     * 
+     *
      * @return array
     */
-    public function indexAction($name = "gkgkg",$firstname = "toto",Request $request)
+    public function indexAction($name = "gkgkg", $firstname = "toto", Request $request)
     {
         // replace this example code with whatever you need
-        /*return 
+        /*return
         $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);*/ 
+        ]);*/
         
    
         $forms = $this->getDoctrine()->getRepository("AppBundle:Formation")->findAll();
         $loisirs = $this->getDoctrine()->getRepository('AppBundle:Loisirs')->findAll();
         return array('name'=>$name,'firstname'=>$firstname,'formations'=>$forms,'loisirs'=>$loisirs);
-    
     }
-        /**
+    /**
      *  @Route("/demo", name="demopage")
      * @Template()
      */
     public function demoAction(Request $request)
     {
         // replace this example code with whatever you need
-        /*return 
+        /*return
         $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);*/ 
+        ]);*/
         
         return array();
     }
@@ -53,10 +51,10 @@ class DefaultController extends Controller
     public function insertAction()
     {
         // replace this example code with whatever you need
-        /*return 
+        /*return
         $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);*/ 
+        ]);*/
         
         $form = new Formation();
         $form->setName('Ma formation');
@@ -64,5 +62,4 @@ class DefaultController extends Controller
         $eManager->persist($form);
         $eManager->flush();
     }
-
 }

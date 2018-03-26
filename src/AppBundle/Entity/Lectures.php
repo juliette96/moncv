@@ -65,4 +65,3 @@ class Toto
         return $this->type;
     }
 }
-

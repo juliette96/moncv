@@ -9,22 +9,23 @@ use ApiPlatform\Core\Annotation\ApiResource;
  * @ORM\Entity
  * @ORM\Table(name="Formation")
  **/
-class Formation {
+class Formation
+{
     /**
-     * @ORM\Id 
-     * @ORM\Column(type="integer") 
+     * @ORM\Id
+     * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
      **/
     private $id;
     /**
-     * @ORM\Column(type="string") 
+     * @ORM\Column(type="string")
     **/
     private $name;
     /**
      * @ORM\Column(type="string")
     **/
     private $dateDebut;
-    /** 
+    /**
      * @ORM\Column(type="string")
     **/
     private $dateFin;
@@ -73,5 +74,4 @@ class Formation {
     {
         $this->lieu=$new;
     }
-    
-}    
+}
