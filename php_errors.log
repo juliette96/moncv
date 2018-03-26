@@ -1,0 +1,59 @@
+[12-Feb-2018 07:47:36 UTC] PHP Fatal error:  Cannot redeclare AppBundle\Controller\DefaultController::indexAction() in /home/ubuntu/workspace/src/AppBundle/Controller/DefaultController.php on line 64
+[12-Feb-2018 07:47:36 UTC] PHP Stack trace:
+[12-Feb-2018 07:47:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app_dev.php:0
+[12-Feb-2018 07:47:36 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app_dev.php:29
+[12-Feb-2018 07:47:36 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:197
+[12-Feb-2018 07:47:36 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeContainer() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:137
+[12-Feb-2018 07:47:36 UTC] PHP   5. Symfony\Component\Config\ConfigCache->isFresh() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:585
+[12-Feb-2018 07:47:36 UTC] PHP   6. Symfony\Component\Config\ResourceCheckerConfigCache->isFresh() /home/ubuntu/workspace/var/cache/dev/classes.php:2913
+[12-Feb-2018 07:47:36 UTC] PHP   7. Symfony\Component\Config\Resource\SelfCheckingResourceChecker->isFresh() /home/ubuntu/workspace/var/cache/dev/classes.php:2836
+[12-Feb-2018 07:47:36 UTC] PHP   8. Symfony\Component\Config\Resource\ReflectionClassResource->isFresh() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Resource/SelfCheckingResourceChecker.php:34
+[12-Feb-2018 07:47:36 UTC] PHP   9. Symfony\Component\Config\Resource\ReflectionClassResource->computeHash() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Resource/ReflectionClassResource.php:45
+[12-Feb-2018 07:47:36 UTC] PHP  10. ReflectionClass->__construct() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Resource/ReflectionClassResource.php:100
+[12-Feb-2018 07:47:36 UTC] PHP  11. spl_autoload_call() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Resource/ReflectionClassResource.php:100
+[12-Feb-2018 07:47:36 UTC] PHP  12. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Resource/ReflectionClassResource.php:100
+[12-Feb-2018 08:00:27 UTC] PHP Fatal error:  Cannot redeclare AppBundle\Controller\DefaultController::indexAction() in /home/ubuntu/workspace/src/AppBundle/Controller/DefaultController.php on line 64
+[12-Feb-2018 08:00:27 UTC] PHP Stack trace:
+[12-Feb-2018 08:00:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app_dev.php:0
+[12-Feb-2018 08:00:27 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app_dev.php:29
+[12-Feb-2018 08:00:27 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:197
+[12-Feb-2018 08:00:27 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeContainer() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:137
+[12-Feb-2018 08:00:27 UTC] PHP   5. Symfony\Component\Config\ConfigCache->isFresh() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:585
+[12-Feb-2018 08:00:27 UTC] PHP   6. Symfony\Component\Config\ResourceCheckerConfigCache->isFresh() /home/ubuntu/workspace/var/cache/dev/classes.php:2913
+[12-Feb-2018 08:00:27 UTC] PHP   7. Symfony\Component\Config\Resource\SelfCheckingResourceChecker->isFresh() /home/ubuntu/workspace/var/cache/dev/classes.php:2836
+[12-Feb-2018 08:00:27 UTC] PHP   8. Symfony\Component\Config\Resource\ReflectionClassResource->isFresh() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Resource/SelfCheckingResourceChecker.php:34
+[12-Feb-2018 08:00:27 UTC] PHP   9. Symfony\Component\Config\Resource\ReflectionClassResource->computeHash() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Resource/ReflectionClassResource.php:45
+[12-Feb-2018 08:00:27 UTC] PHP  10. ReflectionClass->__construct() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Resource/ReflectionClassResource.php:100
+[12-Feb-2018 08:00:27 UTC] PHP  11. spl_autoload_call() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Resource/ReflectionClassResource.php:100
+[12-Feb-2018 08:00:27 UTC] PHP  12. Symfony\Component\Debug\DebugClassLoader->loadClass() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/Config/Resource/ReflectionClassResource.php:100
+[12-Feb-2018 08:16:14 UTC] PHP Fatal error:  Class 'AppBundle\Controller\Formation' not found in /home/ubuntu/workspace/src/AppBundle/Controller/DefaultController.php on line 60
+[12-Feb-2018 08:16:14 UTC] PHP Stack trace:
+[12-Feb-2018 08:16:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app_dev.php:0
+[12-Feb-2018 08:16:14 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app_dev.php:29
+[12-Feb-2018 08:16:14 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:202
+[12-Feb-2018 08:16:14 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/var/cache/dev/classes.php:4314
+[12-Feb-2018 08:16:14 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/var/cache/dev/classes.php:4359}() /home/ubuntu/workspace/var/cache/dev/classes.php:4359
+[12-Feb-2018 08:16:14 UTC] PHP   6. AppBundle\Controller\DefaultController->insertAction() /home/ubuntu/workspace/var/cache/dev/classes.php:4359
+[12-Feb-2018 08:18:21 UTC] PHP Fatal error:  Class 'AppBundle\Controller\Formation' not found in /home/ubuntu/workspace/src/AppBundle/Controller/DefaultController.php on line 60
+[12-Feb-2018 08:18:21 UTC] PHP Stack trace:
+[12-Feb-2018 08:18:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app_dev.php:0
+[12-Feb-2018 08:18:21 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app_dev.php:29
+[12-Feb-2018 08:18:21 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:202
+[12-Feb-2018 08:18:21 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/var/cache/dev/classes.php:4314
+[12-Feb-2018 08:18:21 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/var/cache/dev/classes.php:4359}() /home/ubuntu/workspace/var/cache/dev/classes.php:4359
+[12-Feb-2018 08:18:21 UTC] PHP   6. AppBundle\Controller\DefaultController->insertAction() /home/ubuntu/workspace/var/cache/dev/classes.php:4359
+[12-Feb-2018 10:46:18 UTC] PHP Fatal error:  Class 'ApiPlatform\Core\Bridge\Symfony\Bundle\ApiPlatformBundle' not found in /home/ubuntu/workspace/app/AppKernel.php on line 20
+[12-Feb-2018 10:46:18 UTC] PHP Stack trace:
+[12-Feb-2018 10:46:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app_dev.php:0
+[12-Feb-2018 10:46:18 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app_dev.php:29
+[12-Feb-2018 10:46:18 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:197
+[12-Feb-2018 10:46:18 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeBundles() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:134
+[12-Feb-2018 10:46:18 UTC] PHP   5. AppKernel->registerBundles() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:494
+[12-Feb-2018 10:46:32 UTC] PHP Fatal error:  Class 'ApiPlatform\Core\Bridge\Symfony\Bundle\ApiPlatformBundle' not found in /home/ubuntu/workspace/app/AppKernel.php on line 20
+[12-Feb-2018 10:46:32 UTC] PHP Stack trace:
+[12-Feb-2018 10:46:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/web/app_dev.php:0
+[12-Feb-2018 10:46:32 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/web/app_dev.php:29
+[12-Feb-2018 10:46:32 UTC] PHP   3. Symfony\Component\HttpKernel\Kernel->boot() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:197
+[12-Feb-2018 10:46:32 UTC] PHP   4. Symfony\Component\HttpKernel\Kernel->initializeBundles() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:134
+[12-Feb-2018 10:46:32 UTC] PHP   5. AppKernel->registerBundles() /home/ubuntu/workspace/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:494
+[12-Feb-2018 15:51:46 UTC] PHP Fatal error:  Class 'Symphony\Component\Form\AbstractType' not found in /home/ubuntu/workspace/src/AppBundle/Form/LoisirsType.php on line 9

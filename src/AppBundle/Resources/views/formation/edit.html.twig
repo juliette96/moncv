@@ -1,0 +1,10 @@
+<html>
+    <body>
+        
+        <h3>Modification d'une formation :)</h3>
+        {{ form_start(form,{'action': path('validate_edit_formation', {'id': entity.getId()})})}}
+        {{ form(form) }}
+        
+    </body>
+    
+</html>
