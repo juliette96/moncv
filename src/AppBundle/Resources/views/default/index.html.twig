@@ -126,13 +126,15 @@
                                     {{ loi.getName() }}
                                     </div>
                                 </div>
-                                <a href="{{path('edit_loisirs', {'id':loi.getId()})}}" class="btn btn-warning">Modifier</a>
-                                <a href="{{path('delete_loisirs', {'id':loi.getId()})}}" class="btn btn-danger">Supprimer</a>
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <a href="{{path('edit_loisirs', {'id':loi.getId()})}}" class="btn btn-warning">Modifier</a>
+                                    <a href="{{path('delete_loisirs', {'id':loi.getId()})}}" class="btn btn-danger">Supprimer</a>
+                                {% endif %}
                             </div>
                     {% endfor %}
-
-                <a href="{{path('create_loisirs')}}" class="btn btn-success">Créer</a>
-                
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{path('create_loisirs')}}" class="btn btn-success">Créer</a>
+                {% endif %}
             </div>
         </div>    
     </div>
@@ -417,12 +419,16 @@
                                     <h3>{{ forma.getName() }}</h3>
                                     <h4>{{ forma.getLieu() }}</h4>   
                                 </div>
-                                <a href="{{path('edit_formation', {'id':forma.getId()})}}" class="btn btn-warning">Modifier</a>
-                                <a href="{{path('delete_formation', {'id':forma.getId()})}}" class="btn btn-danger">Supprimer</a>
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <a href="{{path('edit_formation', {'id':forma.getId()})}}" class="btn btn-warning">Modifier</a>
+                                    <a href="{{path('delete_formation', {'id':forma.getId()})}}" class="btn btn-danger">Supprimer</a>
+                                {% endif %}
                             {% endfor %}
                     </div>
-                       <a href="{{path('create_formation')}}" class="btn btn-success">Créer</a>
-                        <!-- .experience-item -->
+                        {% if is_granted('ROLE_ADMIN') %}
+                           <a href="{{path('create_formation')}}" class="btn btn-success">Créer</a>
+                            <!-- .experience-item -->
+                        {% endif %}
                     </div>
                 </div>
                 <!--.row-->
