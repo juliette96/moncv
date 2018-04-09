@@ -17,7 +17,7 @@ class DefaultController extends Controller
      *
      * @return array
     */
-    public function indexAction($name = "gkgkg", $firstname = "toto", Request $request)
+    public function indexAction($name = "Demas", $firstname = "Juliette", Request $request)
     {
         // replace this example code with whatever you need
         /*return
@@ -28,7 +28,8 @@ class DefaultController extends Controller
    
         $forms = $this->getDoctrine()->getRepository("AppBundle:Formation")->findAll();
         $loisirs = $this->getDoctrine()->getRepository('AppBundle:Loisirs')->findAll();
-        return array('name'=>$name,'firstname'=>$firstname,'formations'=>$forms,'loisirs'=>$loisirs);
+        $xp = $this->getDoctrine()->getRepository('AppBundle:Experience')->findAll();
+        return array('name'=>$name,'firstname'=>$firstname,'formations'=>$forms,'loisirs'=>$loisirs,'experience'=>$xp);
     }
     /**
      *  @Route("/demo", name="demopage")

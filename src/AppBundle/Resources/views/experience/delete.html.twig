@@ -1,0 +1,10 @@
+<html>
+    <body>
+        
+        <h3>Voulez-vous vraiment supprimer cette experience ? :(</h3>
+        {{ form_start(form,{'action': path('validate_delete_experience', {'id': entity.getId()})})}}
+        {{ form(form) }}
+        
+    </body>
+    
+</html>

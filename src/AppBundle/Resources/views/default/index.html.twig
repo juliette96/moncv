@@ -16,198 +16,133 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="profile-img">
-                    <img src="{{ asset('template/img/img-profile.jpg') }}" class="img-responsive" alt=""/>
+                    <img src="{{ asset('template/img/img-profile.png') }}" class="img-responsive" alt=""/>
                 </div>
                 <!-- Profile Image -->
-                <a href="{{path('admin')}}" class="btn btn-success">Authentification</a>
+                
             </div>
             <div class="col-md-9">
                 <div class="name-wrapper">
                     <h1 class="name">{{firstname}} {{name}}</h1>
-                    <span>Freelance Web Designer</span>
+                    <span>Developpeur Web</span>
                 </div>
-                <p>
-                    Credibly embrace visionary internal or "organic" sources and business benefits. Collaboratively
-                    integrate efficient portals rather than customized customer service. Assertively deliver
-                    frictionless services via leveraged interfaces. Conveniently evisculate accurate sources and
-                    process-centric expertise.Energistically fabricate customized imperatives through cooperative
-                    catalysts for change.
-                </p>
 
 
                 <div class="row">
                     <div class="col-md-3">
                         <div class="personal-details">
-                            <strong>OCTOBER 17, 1996</strong>
-                            <small>BIRTH</small>
+                            <strong>9 mars 1996</strong>
+                            <small>Date de naissance</small>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="personal-details">
-                            <strong>UNITED KINGDOM</strong>
-                            <small>NATIONALITY</small>
+                            <strong>Française</strong>
+                            <small>Nationalité</small>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="personal-details">
-                            <strong>ENGLISH <span>(NATIVE)</span>, FRENCH <span>(INTERMEDIATE)</span></strong>
-                            <small>LANGUAGE</small>
+                            <strong>Français <span>(langue maternelle)</span>, Anglais <span>(b1)</span>, Allemand <span>(b1)</span></strong>
+                            <small>Langues</small>
                         </div>
                     </div>
                 </div>
 
                 <ul class="social-icon">
                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-slack" aria-hidden="true"></i></a></li>
-                    <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+
                 </ul>
             </div>
         </div>
     </div>
 </header>
 <!-- .header-->
-
-<section class="section-wrapper">
+<!-- profil-debut -->
+<section class="section-profile section-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="section-title">
-                    <h2>My Activity</h2>
-                </div>
+                <div class="section-title"><h2>Domaines</h2></div>
             </div>
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="item-stats">
-                            <div class="item-stats-value">100%</div>
-                            <div class="item-stats-name">Jobs Success</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="item-stats">
-                            <div class="item-stats-value">96%</div>
-                            <div class="item-stats-name">On Budget</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="item-stats">
-                            <div class="item-stats-value">99%</div>
-                            <div class="item-stats-name">On Time</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="item-stats">
-                            <div class="item-stats-value">89%</div>
-                            <div class="item-stats-name">Repeat Hire Rate</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- .activity-wrapper -->
 
-<section class="work-history-wrapper section-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="section-title">
-                    <h2>Hobbies</h2>
-                </div>
-            </div>
             <div class="col-md-9">
                 <div class="row">
-                    {% for loi in loisirs %}
-                            <div class="col-sm-2">
-                                <div class="item-stats">
-                                    <div class="item-stats-name">
-                                    {{ loi.getName() }}
-                                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object" src="{{ asset('template/img/web.png') }}" alt="...">
+                                    </a>
                                 </div>
-                                {% if is_granted('ROLE_ADMIN') %}
-                                    <a href="{{path('edit_loisirs', {'id':loi.getId()})}}" class="btn btn-warning">Modifier</a>
-                                    <a href="{{path('delete_loisirs', {'id':loi.getId()})}}" class="btn btn-danger">Supprimer</a>
-                                {% endif %}
+                                <div class="media-body">
+                                    <h3 class="media-heading"><a href="#">Developpement web</a></h3>
+                                </div>
                             </div>
-                    {% endfor %}
-                {% if is_granted('ROLE_ADMIN') %}
-                    <a href="{{path('create_loisirs')}}" class="btn btn-success">Créer</a>
-                {% endif %}
-            </div>
-        </div>    
-    </div>
-</section>
-<!-- .work-history-wrapper -->
-
-<section class="expertise-wrapper section-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="section-title">
-                    <h2>My Specialities</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object" src="{{ asset('template/img/infographie.jpg') }}" alt="...">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading"><a href="#">Infographie</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object" src="{{ asset('template/img/audiovisuel.png') }}" alt="...">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading"><a href="#">Audiovisuel</a></h3>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object" src="{{ asset('template/img/communication.png') }}" alt="...">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h3 class="media-heading"><a href="#">Communication</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!--.row-->
             </div>
 
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="expertise-item">
-                            <h3>WordPress Theme Development</h3>
-
-                            <p>
-                                Synergistically strategize customer directed resources rather than principle.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="expertise-item">
-                            <h3>Joomla Template Development </h3>
-
-                            <p>
-                                Quickly repurpose reliable customer service with orthogonal ideas. Competently.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="expertise-item">
-                            <h3>Drupal Template Development</h3>
-
-                            <p>
-                                Interactively myocardinate high standards in initiatives rather than next-generation.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="expertise-item">
-                            <h3>Shopify Theme Design</h3>
-
-                            <p>
-                                Dynamically initiate client-based convergence vis-a-vis performance based. </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
-        <!-- .row -->
-
-
+        <!--.row-->
     </div>
+    <!-- .container -->
 </section>
-<!-- .expertise-wrapper -->
-
+<!-- profile-fin -->
+<!-- skills-debut -->
 <section class="section-wrapper skills-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <div class="section-title">
-                    <h2>Skills</h2>
+                    <h2>Compétences</h2>
                 </div>
             </div>
 
@@ -216,15 +151,15 @@
                     <div class="col-md-6">
                         <div class="progress-wrapper">
 
-                            <h3>CODING SKILLS</h3>
+                            <h3>Développement</h3>
 
                             <div class="progress-item">
                                 <span class="progress-title">HTML5</span>
 
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="62" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 62%"><span
-                                            class="progress-percent"> 62%</span>
+                                         aria-valuemax="100" style="width: 80%"><span
+                                            class="progress-percent"> 80%</span>
                                     </div>
                                 </div>
                                 <!-- .progress -->
@@ -236,8 +171,8 @@
 
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 90%"><span
-                                            class="progress-percent"> 90%</span>
+                                         aria-valuemax="100" style="width: 70%"><span
+                                            class="progress-percent"> 70%</span>
                                     </div>
                                 </div>
                                 <!-- /.progress -->
@@ -249,8 +184,8 @@
 
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 75%;"><span
-                                            class="progress-percent"> 75%</span>
+                                         aria-valuemax="100" style="width: 55%;"><span
+                                            class="progress-percent"> 55%</span>
                                     </div>
                                 </div>
                                 <!-- /.progress -->
@@ -262,29 +197,54 @@
 
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 55%;"><span
-                                            class="progress-percent"> 55%</span>
+                                         aria-valuemax="100" style="width: 60%;"><span
+                                            class="progress-percent"> 60%</span>
+                                    </div>
+                                </div>
+                                <!-- /.progress -->
+                            </div>
+                            <!-- /.skill-progress -->
+                            
+                            <div class="progress-item">
+                                <span class="progress-title">Bootstrap</span>
+
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                         aria-valuemax="100" style="width: 60%;"><span
+                                            class="progress-percent"> 60%</span>
+                                    </div>
+                                </div>
+                                <!-- /.progress -->
+                            </div>
+                            <!-- /.skill-progress -->
+                            
+                            <div class="progress-item">
+                                <span class="progress-title">Wordpress</span>
+
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                         aria-valuemax="100" style="width: 70%;"><span
+                                            class="progress-percent"> 70%</span>
                                     </div>
                                 </div>
                                 <!-- /.progress -->
                             </div>
                             <!-- /.skill-progress -->
 
-
                         </div>
                         <!-- /.progress-wrapper -->
                     </div>
                     <div class="col-md-6">
                         <div class="progress-wrapper">
-                            <h3>DESIGN TOOLS</h3>
+                            <h3>Infographie et Audiovisuel</h3>
 
                             <div class="progress-item">
                                 <span class="progress-title">Photoshop</span>
 
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="62" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 90%"><span
-                                            class="progress-percent"> 90%</span>
+                                         aria-valuemax="100" style="width: 40%"><span
+                                            class="progress-percent"> 40%</span>
                                     </div>
                                 </div>
                                 <!-- .progress -->
@@ -296,8 +256,8 @@
 
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                         aria-valuemax="100" style="width: 70%"><span
-                                            class="progress-percent"> 50%</span>
+                                         aria-valuemax="100" style="width: 65%"><span
+                                            class="progress-percent"> 65%</span>
                                     </div>
                                 </div>
                                 <!-- /.progress -->
@@ -305,7 +265,7 @@
                             <!-- /.skill-progress -->
 
                             <div class="progress-item">
-                                <span class="progress-title">Sketch</span>
+                                <span class="progress-title">InDesign</span>
 
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
@@ -318,7 +278,7 @@
                             <!-- /.skill-progress -->
 
                             <div class="progress-item">
-                                <span class="progress-title">MACAW</span>
+                                <span class="progress-title">Premiere Pro</span>
 
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
@@ -329,9 +289,39 @@
                                 <!-- /.progress -->
                             </div>
                             <!-- /.skill-progress -->
+                            
+                            <div class="progress-item">
+                                <span class="progress-title">After Effect</span>
+
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                         aria-valuemax="100" style="width: 65%;"><span
+                                            class="progress-percent"> 65%</span>
+                                    </div>
+                                </div>
+                                <!-- /.progress -->
+                            </div>
+                            <!-- /.skill-progress -->
 
                         </div>
                         <!-- /.progress-wrapper -->
+                        
+                        <div class="progress-item">
+                                <span class="progress-title">Final Cut Pro X</span>
+
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                                         aria-valuemax="100" style="width: 60%;"><span
+                                            class="progress-percent"> 60%</span>
+                                    </div>
+                                </div>
+                                <!-- /.progress -->
+                            </div>
+                            <!-- /.skill-progress -->
+
+                        </div>
+                        <!-- /.progress-wrapper -->
+                        
                     </div>
                 </div>
                 <!--.row -->
@@ -341,73 +331,50 @@
     </div>
     <!-- .container-fluid -->
 </section>
-<!-- .skills-wrapper -->
-
-<section class="section-wrapper section-experience">
+<!-- skills-fin -->
+<!-- experience-debut -->
+<section class="section-profile section-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="section-title"><h2>Work Experience</h2></div>
+                <div class="section-title"><h2>Expériences</h2></div>
             </div>
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="content-item">
-                            <small>2015 - Present</small>
-                            <h3>Senior Developer</h3>
-                            <h4>Computer & Motor Ltd.</h4>
-
-                            <p>United Kingdom, London</p>
+                 <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% for xp in experience %}
+                                
+                                <div class="content-item">
+                                    <small>{{ xp.getDateDebut() }} - {{ xp.getDateFin() }}</small>
+                                    <h3>{{ xp.getName() }}</h3>
+                                    <h4>{{ xp.getLieu() }}</h4>   
+                                </div>
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <a href="{{path('edit_experience', {'id':xp.getId()})}}" class="btn btn-warning">Modifier</a>
+                                    <a href="{{path('delete_experience', {'id':xp.getId()})}}" class="btn btn-danger">Supprimer</a>
+                                {% endif %}
+                            {% endfor %}
                         </div>
-                        <!-- .experience-item -->
+                        {% if is_granted('ROLE_ADMIN') %}
+                           <a href="{{path('create_experience')}}" class="btn btn-success">Créer</a>
+                            <!-- .experience-item -->
+                        {% endif %}
                     </div>
-                    <div class="col-md-6">
-                        <div class="content-item">
-                            <small>2012 - 2015</small>
-                            <h3>Webdesigner</h3>
-                            <h4>BizzNiss</h4>
+                 </div>   
+            
 
-                            <p>United Kingdom, London</p>
-                        </div>
-                        <!-- .experience-item -->
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-md-6">
-                        <div class="content-item">
-                            <small>2012 - 2015</small>
-                            <h3>Web Developer</h3>
-                            <h4>Unique Soft</h4>
-
-                            <p>United Kingdom, London</p>
-                        </div>
-                        <!-- .experience-item -->
-                    </div>
-                    <div class="col-md-6">
-                        <div class="content-item">
-                            <small>2010 - 2012</small>
-                            <h3>Front-end Developer</h3>
-                            <h4>Somsom LLC</h4>
-
-                            <p>United Kingdom, London</p>
-                        </div>
-                        <!-- .experience-item -->
-                    </div>
-                </div>
-            </div>
-            <!--.row-->
         </div>
+        <!--.row-->
     </div>
     <!-- .container -->
 </section>
-<!-- .section-experience -->
-
+<!-- experience-fin -->
+<!-- education-debut -->
 <section class="section-education section-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="section-title"><h2>Education</h2></div>
+                <div class="section-title"><h2>Formation</h2></div>
             </div>
 
             <div class="col-md-9">
@@ -441,87 +408,41 @@
     </div>
     <!-- .container -->
 </section>
-<!-- .section-education -->
-
-<section class="section-profile section-wrapper">
+<!-- education-fin -->
+<!-- hobbies-debut -->
+<section class="work-history-wrapper section-wrapper">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="section-title"><h2>Marketplace Profile</h2></div>
+                <div class="section-title">
+                    <h2>Loisirs</h2>
+                </div>
             </div>
-
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="profile-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object" src="{{ asset('template/img/m-logo-studio.png') }}" alt="...">
-                                    </a>
+                    {% for loi in loisirs %}
+                            <div class="col-sm-3">
+                                <div class="item-stats">
+                                    <div class="item-stats-name">
+                                    <h3>{{ loi.getName() }}</h3>
+                                    </div>
                                 </div>
-                                <div class="media-body">
-                                    <h3 class="media-heading"><a href="#">ENVATO STUDIO</a></h3>
-                                    Seamlessly formulate covalent outsourcing vis-a-vis virtual resources. Distinctively conceptualize.
-                                </div>
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <a href="{{path('edit_loisirs', {'id':loi.getId()})}}" class="btn btn-warning">Modifier</a>
+                                    <a href="{{path('delete_loisirs', {'id':loi.getId()})}}" class="btn btn-danger">Supprimer</a>
+                                {% endif %}
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="profile-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object" src="{{ asset('template/img/m-logo-freelancer.png') }}" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h3 class="media-heading"><a href="#">FREELANCER</a></h3>
-                                    Seamlessly formulate covalent outsourcing vis-a-vis virtual resources. Distinctively conceptualize.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="profile-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img class="media-object" src="{{ asset('template/img/m-logo-upwork.png') }}" alt="...">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h3 class="media-heading"><a href="#">UPWORK</a></h3>
-                                    Seamlessly formulate covalent outsourcing vis-a-vis virtual resources. Distinctively conceptualize.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="profile-item">
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h3 class="media-heading"><a href="#">PEOPLEPERHOUR</a></h3>
-                                    Seamlessly formulate covalent outsourcing vis-a-vis virtual resources. Distinctively conceptualize.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--.row-->
+                    {% endfor %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{path('create_loisirs')}}" class="btn btn-success">Créer</a>
+                {% endif %}
             </div>
-
-        </div>
-        <!--.row-->
+        </div>    
     </div>
-    <!-- .container -->
+    </div>
 </section>
-<!-- .section-profile -->
-
+<!-- hobbies-fin -->
+<!-- portfolio-debut -->
 <section class="section-wrapper portfolio-section">
     <div class="container">
         <div class="row">
@@ -536,12 +457,12 @@
                     <div class="col-md-4 col-sm-6">
                         <a class="portfolio-item" href="#">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('template/img/portfolio-1.jpg') }}" alt="">
+                                <img src="{{ asset('template/img/p1.jpg') }}" alt="">
                             </div>
 
                             <div class="portfolio-info">
-                                <h3>Creative concepts</h3>
-                                <small>domain.com</small>
+                                <h3>Edward aux mains d'argent</h3>
+                                <small>Affiche minimaliste</small>
                             </div>
                             <!-- portfolio-info -->
                         </a>
@@ -550,12 +471,12 @@
                     <div class="col-md-4 col-sm-6">
                         <a class="portfolio-item" href="#">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('template/img/portfolio-2.jpg') }}" alt="">
+                                <img src="{{ asset('template/img/p2.png') }}" alt="">
                             </div>
 
                             <div class="portfolio-info">
-                                <h3>Customer focused</h3>
-                                <small>domain.com</small>
+                                <h3>Comm'Unity</h3>
+                                <small>Logo agence de com</small>
                             </div>
                             <!-- portfolio-info -->
                         </a>
@@ -564,12 +485,12 @@
                     <div class="col-md-4 col-sm-6">
                         <a class="portfolio-item" href="#">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('template/img/portfolio-3.jpg') }}" alt="">
+                                <img src="{{ asset('template/img/p3.jpg') }}" alt="">
                             </div>
 
                             <div class="portfolio-info">
-                                <h3>Management methodology</h3>
-                                <small>domain.com</small>
+                                <h3>Comm'Unity</h3>
+                                <small>Plaquette com</small>
                             </div>
                             <!-- portfolio-info -->
                         </a>
@@ -578,12 +499,12 @@
                     <div class="col-md-4 col-sm-6">
                         <a class="portfolio-item" href="#">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('template/img/portfolio-4.jpg') }}" alt="">
+                                <img src="{{ asset('template/img/p4.jpg') }}" alt="">
                             </div>
 
                             <div class="portfolio-info">
-                                <h3>Market research</h3>
-                                <small>domain.com</small>
+                                <h3>Fruits</h3>
+                                <small>Dessin aux pastels</small>
                             </div>
                             <!-- portfolio-info -->
                         </a>
@@ -592,12 +513,12 @@
                     <div class="col-md-4 col-sm-6">
                         <a class="portfolio-item" href="#">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('template/img/portfolio-5.jpg') }}" alt="">
+                                <img src="{{ asset('template/img/p5.jpg') }}" alt="">
                             </div>
 
                             <div class="portfolio-info">
-                                <h3>Market research</h3>
-                                <small>domain.com</small>
+                                <h3>Sydney</h3>
+                                <small>Pop Up</small>
                             </div>
                             <!-- portfolio-info -->
                         </a>
@@ -606,12 +527,12 @@
                     <div class="col-md-4 col-sm-6">
                         <a class="portfolio-item" href="#">
                             <div class="portfolio-thumb">
-                                <img src="{{ asset('template/img/portfolio-6.jpg') }}" alt="">
+                                <img src="{{ asset('template/img/p6.jpg') }}" alt="">
                             </div>
 
                             <div class="portfolio-info">
-                                <h3>Market research</h3>
-                                <small>domain.com</small>
+                                <h3>Hyppocampe</h3>
+                                <small>Traits au feutre noir</small>
                             </div>
                             <!-- portfolio-info -->
                         </a>
@@ -623,176 +544,8 @@
         <!-- /.row -->
     </div>
 </section>
-<!-- .portfolio -->
-
-<section class="review-section section-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="section-title">
-                    <h2>Recent Reviews</h2>
-                </div>
-            </div>
-
-            <div class="col-md-9">
-                <div id="review">
-                    <div class="item">
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="{{ asset('template/img/img-testimonial-2.jpg') }}" alt="avatar"/>
-                            </div>
-
-                            <div class="media-body">
-                                <div class="user-name">Sofia Voigt</div>
-                                <!--.user-name-->
-
-                                <div class="rating" data-star_rating="5.0">
-                                    <div class="rating-total">
-                                        <!-- Change rating percentage rate-0, rate-1, rate-2, rate-3, rate-4, rate-5  -->
-                                        <div class="rating-progress rate-5">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--.rating-->
-                            </div>
-                        </div>
-
-
-                        <div class="review-text">
-                            Seamlessly leverage other's transparent resources after resource maximizing channels.
-                            Continually grow economically sound collaboration and idea-sharing and compelling
-                            technology. Collaboratively unleash.
-                        </div>
-                        <!--.review-text-->
-                    </div>
-                    <!--.item-->
-
-                    <div class="item">
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="{{ asset('template/img/img-testimonial-1.jpg') }}" alt="avatar"/>
-                            </div>
-
-                            <div class="media-body">
-                                <div class="user-name">Matteo Müller</div>
-                                <!--.user-name-->
-
-                                <div class="rating" data-star_rating="4.0">
-                                    <div class="rating-total">
-                                        <!-- Change rating percentage rate-0, rate-1, rate-2, rate-3, rate-4, rate-5  -->
-                                        <div class="rating-progress rate-4">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--.rating-->
-                            </div>
-                        </div>
-                        <div class="review-text">
-                            Uniquely target empowered relationships after client-based e-commerce. Energistically morph
-                            worldwide resources for future-proof content. Authoritatively transform granular users
-                            whereas intermandated applications.
-                        </div>
-                        <!--.review-text-->
-                    </div>
-                    <!--.item-->
-
-                    <div class="item">
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="{{ asset('template/img/img-testimonial-3.jpg') }}" alt="avatar"/>
-                            </div>
-
-                            <div class="media-body">
-                                <div class="user-name">Noel Schulze</div>
-                                <!--.user-name-->
-
-                                <div class="rating" data-star_rating="3.0">
-                                    <div class="rating-total">
-                                        <!-- Change rating percentage rate-0, rate-1, rate-2, rate-3, rate-4, rate-5  -->
-                                        <div class="rating-progress rate-3">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--.rating-->
-                            </div>
-                        </div>
-                        <div class="review-text">
-                            Enthusiastically mesh an expanded array of infrastructures through distinctive customer
-                            service. Distinctively reintermediate e-business information vis-a-vis excellent networks.
-                            Uniquely fabricate just.
-                        </div>
-                        <!--.review-text-->
-                    </div>
-                    <!--.item-->
-
-                    <div class="item">
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="{{ asset('template/img/unknown.png') }}" alt="avatar"/>
-                            </div>
-
-                            <div class="media-body">
-                                <div class="user-name">Jason Lehmann</div>
-                                <!--.user-name-->
-
-                                <div class="rating" data-star_rating="2.0">
-                                    <div class="rating-total">
-                                        <!-- Change rating percentage rate-0, rate-1, rate-2, rate-3, rate-4, rate-5  -->
-                                        <div class="rating-progress rate-2">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--.rating-->
-                            </div>
-                        </div>
-                        <div class="review-text">
-                            Proactively network unique potentialities rather than one-to-one process improvements.
-                            Dynamically leverage existing progressive methods of empowerment rather than efficient
-                            functionalities. Continually.
-                        </div>
-                        <!--.review-text-->
-                    </div>
-                    <!--.item-->
-
-                    <div class="item">
-                        <div class="media">
-                            <div class="media-left">
-                                <img src="{{ asset('template/img/unknown.png') }}" alt="avatar"/>
-                            </div>
-
-                            <div class="media-body">
-                                <div class="user-name">Jason Lehmann</div>
-                                <!--.user-name-->
-
-                                <div class="rating" data-star_rating="1.0">
-                                    <div class="rating-total">
-                                        <!-- Change rating percentage rate-0, rate-1, rate-2, rate-3, rate-4, rate-5  -->
-                                        <div class="rating-progress rate-1">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--.rating-->
-                            </div>
-                        </div>
-                        <div class="review-text">
-                            Progressively leverage existing 24/7 paradigms through exceptional process improvements.
-                            Completely revolutionize compelling architectures for team driven partnerships. Quickly
-                            transform focused value.
-                        </div>
-                        <!--.review-text-->
-                    </div>
-                    <!--.item-->
-
-                </div>
-                <!--#review-->
-            </div>
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
-</section>
-<!-- .review-section -->
-
+<!-- portfolio-fin -->
+<!-- contact-debut -->
 <section class="section-contact section-wrapper">
     <div class="container">
         <div class="row">
@@ -804,30 +557,25 @@
 
             <div class="col-md-9">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <address>
-                            <strong>Address</strong><br>
-                            1355 Market Street, Suite 900<br>
-                            San Francisco, CA 94103
+                            <strong>Adresse</strong><br>
+                            12 Road Of Nowhere<br>
+                            38000 Grenoble
 
                         </address>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <address>
-                            <strong>Phone Number</strong><br>
-                            +61 3 8376 6284
+                            <strong>Téléphone</strong><br>
+                            06 00 12 21 36
                         </address>
                     </div>
-                    <div class="col-md-3">
-                        <address>
-                            <strong>Mobile Number</strong><br>
-                            987 654 321
-                        </address>
-                    </div>
-                    <div class="col-md-3">
+
+                    <div class="col-md-4">
                         <address>
                             <strong>Email</strong><br>
-                            <a href="mailto:#">coffee@amelie.me</a>
+                            <a href="mailto:#">juliettedemas@oups.net</a>
                         </address>
                     </div>
 
@@ -835,12 +583,12 @@
                 <!--.row-->
 
                 <div class="feedback-form">
-                    <h3>GET IN TOUCH</h3>
+                    <h4>ME CONTACTER</h4>
 
                     <form id="contactForm" action="sendemail.php" method="POST">
                         <div class="form-group">
                             <input type="text" name="name" required="" class="form-control" id="InputName"
-                                   placeholder="Full Name">
+                                   placeholder="NOM Prénom">
                         </div>
                         <div class="form-group">
                             <input type="email" name="email" required="" class="form-control" id="InputEmail"
@@ -848,11 +596,11 @@
                         </div>
                         <div class="form-group">
                             <input type="text" name="subject" class="form-control" id="InputSubject"
-                                   placeholder="Subject">
+                                   placeholder="Objet">
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" rows="4" required="" name="message" id="message-text"
-                                      placeholder="Write message"></textarea>
+                                      placeholder="Message"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -867,15 +615,14 @@
     </div>
     <!--.container-fluid-->
 </section>
-<!--.section-contact-->
+<!-- contact-fin -->
 
 <footer class="footer">
     <div class="copyright-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="copytext">&copy; MyProfile, All rights reserved | Design By: <a
-                            href="https://themehippo.com">themehippo</a></div>
+                    <a href="{{path('admin')}}" class="btn btn-success">Authentification</a>
                 </div>
             </div>
             <!--.row-->
