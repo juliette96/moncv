@@ -2,9 +2,9 @@
 
 ## Voici mon CV réalisé avec Symfony dans le cadre d'un module Symfony dans la formation.
 
-!(/web/template/img/cv1.PNG)
-!(/web/template/img/cv2.PNG)
-!(/web/template/img/cv3.PNG)
+![](/web/template/img/cv1.PNG)
+![](/web/template/img/cv2.PNG)
+![](/web/template/img/cv3.PNG)
 
 ## Pour aller sur mon CV
 
