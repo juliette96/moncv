@@ -1,18 +1,19 @@
-### Hey, bienvenue !
-====================
+# Hey, bienvenue !
 
 ## Voici mon CV réalisé avec Symfony dans le cadre d'un module Symfony dans la formation.
 
 * **L'adresse pour acceder au cv :** [https://cv-symfony-juliettedemas.c9users.io/web/app_dev.php](https://cv-symfony-juliettedemas.c9users.io/web/app_dev.php)
 * **Pour acceder à la page :** /hey
-* **Pour s'authentifier adminisatrateur :** login : baltazar; pass : dollars
+* **Pour s'authentifier adminisatrateur :**
+* *login : baltazar
+* * pass : dollars
 
 
 ## A propos de mon CV
 
 * Réalisé avec Symfony 3.4
 
-# Ce qui est fait
+## Ce qui est fait
 
 * Intégration d'un template Bootstrap : [template qui vient d'ici !](https://uicookies.com/downloads/myprofile-simple-html-resume-website-template/)
 * Création d'un controleur
@@ -29,7 +30,7 @@
 * * Test unitaire : OK, test des 'get' et des 'set' de mes entités
 * * Test fonctionnel : OK
 
-# Ce qui n'est pas fait
+## Ce qui n'est pas fait
 
 * Traquer les visites
 * Formulaire opérationnel
